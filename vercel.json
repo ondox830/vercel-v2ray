@@ -1,7 +1,60 @@
+// Source - https://stackoverflow.com/a/79631441
+
+// Posted by Shubham Chaturvedi, modified by community. See post 'Timeline' for change history
+
+// Retrieved 2026-04-26, License - CC BY-SA 4.0
+
+
+
 {
-  "version": 2,
-  "cleanUrls": true,
-  "rewrites": [
-    { "source": "/(.*)", "destination": "/" }
-  ]
+"routes": [
+  {
+    "src": "/static/(.*)",           
+    "dest": "/static/$1"
+  },
+  {
+    "src": "/assets/(.*)",           
+    "dest": "/assets/$1"
+  },
+  {
+    "src": "/(.*\\.js)",
+    "dest": "/$1"
+  },
+  {
+    "src": "/(.*\\.css)",
+    "dest": "/$1"
+  },
+  {
+    "src": "/(.*\\.ico)",
+    "dest": "/$1"
+  },
+  {
+    "src": "/(.*\\.png)",
+    "dest": "/$1"
+  },
+  {
+    "src": "/editor/(?<roomId>[^/]+)",
+    "dest": "/index.html"
+  },
+  {
+    "src": "/login",
+    "dest": "/index.html"
+  },
+  {
+    "src": "/register",
+    "dest": "/index.html"
+  },
+  {
+    "src": "/createRoom",
+    "dest": "/index.html"
+  },
+  {
+    "src": "/",
+    "dest": "/index.html"
+  },
+  {
+    "src": "/.*",
+    "dest": "/index.html"
+  }
+]
 }
